@@ -7,16 +7,20 @@ from flask import Flask
 import flask_restful
 
 
+
+
 app = Flask(__name__)
 api = flask_restful.Api(app)
 
 class login(flask_restful.Resource):
     def get(self):
+
         return {'code': 0,'message':'succsess','data':[]}
 
 class registe(flask_restful.Resource):
     def post(self,phone):
         if phone == 'vily':
+
             return {'code': 0,'message':'succsess','data':[]}
         else: return {'code': 1000,'message':'fail','data':[]}
 
